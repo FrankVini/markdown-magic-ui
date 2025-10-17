@@ -12,7 +12,7 @@ export const Header = () => {
           <Shield className="w-8 h-8" />
         </div>
         <div className="flex-1 min-w-[200px]">
-          <h1 className="text-3xl font-bold">SGSI {selectedCompany || ""}</h1>
+          <h1 className="text-3xl font-bold">Domo SI 360º {selectedCompany}</h1>
           <p className="text-primary-foreground/90 text-sm">Sumário Consolidado ISO/IEC 27001:2022</p>
         </div>
         <Select value={selectedCompany} onValueChange={setSelectedCompany}>
@@ -20,6 +20,7 @@ export const Header = () => {
             <SelectValue placeholder="Selecione a empresa" />
           </SelectTrigger>
           <SelectContent className="bg-background z-50">
+            <SelectItem value="">Selecionar</SelectItem>
             <SelectItem value="IONGRADE">IONGRADE</SelectItem>
             <SelectItem value="EMPRESA A">EMPRESA A</SelectItem>
             <SelectItem value="EMPRESA B">EMPRESA B</SelectItem>
@@ -27,14 +28,14 @@ export const Header = () => {
           </SelectContent>
         </Select>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-        <div className="bg-primary-foreground/10 backdrop-blur-sm p-4 rounded-xl">
-          <p className="text-sm text-primary-foreground/80">Versão</p>
-          <p className="text-lg font-semibold">1.0</p>
+      <div className="flex gap-6 mt-4 text-sm">
+        <div>
+          <span className="text-primary-foreground/70">Versão: </span>
+          <span className="font-semibold">1.0</span>
         </div>
-        <div className="bg-primary-foreground/10 backdrop-blur-sm p-4 rounded-xl">
-          <p className="text-sm text-primary-foreground/80">Responsável</p>
-          <p className="text-lg font-semibold">DOMONET</p>
+        <div>
+          <span className="text-primary-foreground/70">Responsável: </span>
+          <span className="font-semibold">DOMONET</span>
         </div>
       </div>
     </header>

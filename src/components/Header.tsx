@@ -20,7 +20,6 @@ export const Header = () => {
             <SelectValue placeholder="Selecione a empresa" />
           </SelectTrigger>
           <SelectContent className="bg-background z-50">
-            <SelectItem value="">Selecionar</SelectItem>
             <SelectItem value="IONGRADE">IONGRADE</SelectItem>
             <SelectItem value="EMPRESA A">EMPRESA A</SelectItem>
             <SelectItem value="EMPRESA B">EMPRESA B</SelectItem>

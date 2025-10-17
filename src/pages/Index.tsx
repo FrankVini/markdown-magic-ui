@@ -6,6 +6,7 @@ import { ProceduresSection } from "@/components/ProceduresSection";
 import { ISOMapSection } from "@/components/ISOMapSection";
 import { MaturityOverview } from "@/components/MaturityOverview";
 import { NextSteps } from "@/components/NextSteps";
+import { Footer } from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -67,13 +68,9 @@ const Index = () => {
             </div>
           </TabsContent>
         </Tabs>
-        
-        <footer className="mt-12 text-center text-sm text-muted-foreground pb-8">
-          <p>Periodicidade média de revisão: 12 meses</p>
-          <p>Responsável pela revisão: CGSIP / Segurança da Informação</p>
-          <p>Última revisão geral: Agosto – Outubro 2025</p>
-        </footer>
       </div>
+      
+      <Footer />
     </div>
   );
 };

@@ -12,7 +12,7 @@ export const Header = () => {
           <Shield className="w-8 h-8" />
         </div>
         <div className="flex-1 min-w-[200px]">
-          <h1 className="text-3xl font-bold">Domo SI 360º {selectedCompany !== "none" ? selectedCompany : ""}</h1>
+          <h1 className="text-3xl font-bold">DOMONET {selectedCompany !== "none" ? selectedCompany : ""}</h1>
           <p className="text-primary-foreground/90 text-sm">Sumário Consolidado ISO/IEC 27001:2022</p>
         </div>
         <Select value={selectedCompany} onValueChange={setSelectedCompany}>
@@ -27,16 +27,6 @@ export const Header = () => {
             <SelectItem value="EMPRESA C">EMPRESA C</SelectItem>
           </SelectContent>
         </Select>
-      </div>
-      <div className="flex gap-6 mt-4 text-sm">
-        <div>
-          <span className="text-primary-foreground/70">Versão: </span>
-          <span className="font-semibold">1.0</span>
-        </div>
-        <div>
-          <span className="text-primary-foreground/70">Responsável: </span>
-          <span className="font-semibold">DOMONET</span>
-        </div>
       </div>
     </header>
   );

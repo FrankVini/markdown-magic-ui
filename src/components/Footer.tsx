@@ -1,4 +1,4 @@
-import { Shield, Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from "lucide-react";
+import { Shield, Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 export const Footer = () => {
@@ -31,11 +31,11 @@ export const Footer = () => {
                 <span>contato@domonet.com.br</span>
               </a>
               <a 
-                href="tel:+5511999999999" 
+                href="tel:+551155060097" 
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>(11) 9 9999-9999</span>
+                <span>(11) 5506-0097</span>
               </a>
               <div className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -103,7 +103,7 @@ export const Footer = () => {
               <h4 className="font-semibold text-sm">Redes Sociais</h4>
               <div className="flex gap-3">
                 <a 
-                  href="https://linkedin.com/company/domonet" 
+                  href="https://www.linkedin.com/company/domomed/posts/?feedView=all" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-secondary hover:bg-primary hover:text-primary-foreground p-2 rounded-lg transition-colors"
@@ -112,22 +112,15 @@ export const Footer = () => {
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://facebook.com/domonet" 
+                  href="https://domonet.com.br/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-secondary hover:bg-primary hover:text-primary-foreground p-2 rounded-lg transition-colors"
-                  aria-label="Facebook"
+                  aria-label="Website"
                 >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a 
-                  href="https://instagram.com/domonet" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-secondary hover:bg-primary hover:text-primary-foreground p-2 rounded-lg transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-4 h-4" />
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
                 </a>
               </div>
             </div>

@@ -46,7 +46,12 @@ const Index = () => {
                 </div>
                 <div className="bg-accent/50 p-4 rounded-lg">
                   <h3 className="font-semibold text-lg mb-2">Histórico de Pentests</h3>
-                  <p className="text-muted-foreground">Conteúdo em desenvolvimento.</p>
+                  <ul className="text-muted-foreground space-y-2 list-disc list-inside">
+                    <li>Sistema Accelero</li>
+                    <li>Sistema Ozone</li>
+                    <li>Gateway Iongrade</li>
+                    <li>Domocan</li>
+                  </ul>
                 </div>
               </div>
             </div>

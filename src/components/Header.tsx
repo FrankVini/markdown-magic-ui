@@ -64,9 +64,8 @@ export const Header = () => {
             <SelectContent className="bg-background z-50">
               <SelectItem value="none">Selecione a empresa</SelectItem>
               <SelectItem value="IONGRADE">IONGRADE</SelectItem>
-              <SelectItem value="EMPRESA A">EMPRESA A</SelectItem>
-              <SelectItem value="EMPRESA B">EMPRESA B</SelectItem>
-              <SelectItem value="EMPRESA C">EMPRESA C</SelectItem>
+              <SelectItem value="DOMONET">DOMONET</SelectItem>
+              <SelectItem value="TECHBOARD">TECHBOARD</SelectItem>
             </SelectContent>
           </Select>
           {session && (

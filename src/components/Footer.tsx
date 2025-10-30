@@ -24,11 +24,11 @@ export const Footer = () => {
             <h3 className="font-semibold text-base">Contato</h3>
             <div className="space-y-3 text-sm">
               <a 
-                href="mailto:contato@domonet.com.br" 
+                href="mailto:soc@domonet.com.br" 
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>contato@domonet.com.br</span>
+                <span>soc@domonet.com.br</span>
               </a>
               <a 
                 href="tel:+551155060097" 

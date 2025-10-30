@@ -126,7 +126,14 @@ export const PoliciesSection = () => {
               {policies.map((policy, index) => (
                 <tr key={policy.code} className="hover:bg-secondary/50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm font-mono font-medium text-primary">{policy.code}</span>
+                    <a 
+                      href="about:blank" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm font-mono font-medium text-primary hover:underline cursor-pointer"
+                    >
+                      {policy.code}
+                    </a>
                   </td>
                   <td className="px-6 py-4">
                     <span className="text-sm text-card-foreground">{policy.title}</span>

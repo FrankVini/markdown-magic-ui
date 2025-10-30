@@ -50,7 +50,8 @@ const Index = () => {
                     <li>Sistema Accelero</li>
                     <li>Sistema Ozone</li>
                     <li>Gateway Iongrade</li>
-                    <li>Domocan</li>
+                    <li>Placa Facial</li>
+                    <li>Domocam</li>
                   </ul>
                 </div>
               </div>

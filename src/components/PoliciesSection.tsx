@@ -127,7 +127,7 @@ export const PoliciesSection = () => {
                 <tr key={policy.code} className="hover:bg-secondary/50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <a 
-                      href="about:blank" 
+                      href={index === 0 ? "/documents/Politica_Iongrade_1.pdf" : "about:blank"}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-sm font-mono font-medium text-primary hover:underline cursor-pointer"

@@ -58,7 +58,14 @@ export const NormsSection = () => {
               {norms.map((norm) => (
                 <tr key={norm.code} className="hover:bg-secondary/50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm font-mono font-medium text-accent">{norm.code}</span>
+                    <a 
+                      href="about:blank" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm font-mono font-medium text-accent hover:underline cursor-pointer"
+                    >
+                      {norm.code}
+                    </a>
                   </td>
                   <td className="px-6 py-4">
                     <span className="text-sm text-card-foreground">{norm.title}</span>

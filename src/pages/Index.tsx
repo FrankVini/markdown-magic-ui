@@ -42,30 +42,43 @@ const Index = () => {
             <div className="bg-card rounded-xl shadow-lg p-6 border border-border">
               <h2 className="text-2xl font-bold mb-6 text-foreground">Testes de Penetração (Pentest)</h2>
               <div className="space-y-6">
-                <div className="bg-accent/50 p-6 rounded-lg">
+                <div className="p-6 rounded-lg border border-border">
                   <h3 className="font-semibold text-lg mb-4">Cobertura Geral de Testes</h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm font-medium">Progresso: 75%</span>
                       <span className="text-xs text-muted-foreground">15 de 20 sistemas testados</span>
                     </div>
-                    <Progress value={75} className="h-3" />
-                    <div className="flex justify-between text-xs text-muted-foreground mt-2">
-                      <span>🔴 Início</span>
-                      <span>🟢 Meta</span>
+                    <div className="relative h-6 w-full overflow-hidden rounded-full bg-secondary">
+                      <div 
+                        className="h-full rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 transition-all duration-500"
+                        style={{ width: '75%' }}
+                      />
+                      <span className="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white drop-shadow-md">
+                        75%
+                      </span>
                     </div>
                   </div>
                 </div>
                 
-                <div className="bg-accent/50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-lg mb-4">Histórico de Pentests</h3>
-                  <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>Sistema Accelero</li>
-                    <li>Sistema Ozone</li>
-                    <li>Gateway Iongrade</li>
-                    <li>Placa Facial</li>
-                    <li>Domocam</li>
-                  </ul>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-6 rounded-lg border border-border">
+                    <h3 className="font-semibold text-lg mb-4 text-green-600">Pentests Concluídos</h3>
+                    <ul className="text-muted-foreground space-y-2 list-disc list-inside">
+                      <li>Sistema Accelero</li>
+                      <li>Sistema Ozone</li>
+                      <li>Gateway Iongrade</li>
+                      <li>Placa Facial</li>
+                      <li>Domocam</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="p-6 rounded-lg border border-border">
+                    <h3 className="font-semibold text-lg mb-4 text-yellow-600">Pentest em Progresso</h3>
+                    <ul className="text-muted-foreground space-y-2 list-disc list-inside">
+                      <li>DomoFacial</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -75,7 +88,7 @@ const Index = () => {
             <div className="bg-card rounded-xl shadow-lg p-6 border border-border">
               <h2 className="text-2xl font-bold mb-6 text-foreground">Lei Geral de Proteção de Dados (LGPD)</h2>
               <div className="grid gap-6 md:grid-cols-2">
-                <div className="bg-accent/50 p-6 rounded-lg">
+                <div className="p-6 rounded-lg border border-border">
                   <h3 className="font-semibold text-lg mb-4 text-foreground">Status de Conformidade</h3>
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
@@ -97,7 +110,7 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <div className="bg-accent/50 p-6 rounded-lg">
+                <div className="p-6 rounded-lg border border-border">
                   <h3 className="font-semibold text-lg mb-4 text-foreground">Dados Pessoais Mapeados</h3>
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
@@ -120,7 +133,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="mt-6 bg-accent/50 p-6 rounded-lg">
+              <div className="mt-6 p-6 rounded-lg border border-border">
                 <h3 className="font-semibold text-lg mb-4 text-foreground">Ações e Prazos</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">

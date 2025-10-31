@@ -31,9 +31,9 @@ const getScoreEmoji = (score: number) => {
 
 const getStatusBadge = (status: "implemented" | "review") => {
   if (status === "implemented") {
-    return <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success/10 text-success">✅ Implementado</span>;
+    return <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-success text-success">✅ Implementado</span>;
   }
-  return <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-warning/10 text-warning">🟡 Em Revisão</span>;
+  return <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-warning text-warning">🟡 Em Revisão</span>;
 };
 
 export const MaturityOverview = () => {

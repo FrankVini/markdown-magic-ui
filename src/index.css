@@ -65,46 +65,46 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 30% 10%;
-    --foreground: 210 15% 94%;
+    --background: 215 20% 12%;
+    --foreground: 210 10% 85%;
 
-    --card: 215 25% 14%;
-    --card-foreground: 210 15% 94%;
+    --card: 215 15% 16%;
+    --card-foreground: 210 10% 85%;
 
-    --popover: 215 25% 14%;
-    --popover-foreground: 210 15% 94%;
+    --popover: 215 15% 16%;
+    --popover-foreground: 210 10% 85%;
 
-    --primary: 215 70% 55%;
-    --primary-foreground: 215 30% 10%;
+    --primary: 215 15% 35%;
+    --primary-foreground: 210 10% 85%;
 
-    --secondary: 215 20% 20%;
-    --secondary-foreground: 210 15% 94%;
+    --secondary: 215 12% 20%;
+    --secondary-foreground: 210 10% 85%;
 
-    --muted: 215 20% 20%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 215 12% 20%;
+    --muted-foreground: 210 8% 60%;
 
-    --accent: 185 60% 50%;
-    --accent-foreground: 215 30% 10%;
+    --accent: 215 12% 24%;
+    --accent-foreground: 210 10% 85%;
 
-    --destructive: 0 62% 55%;
-    --destructive-foreground: 210 15% 94%;
+    --destructive: 0 50% 45%;
+    --destructive-foreground: 210 10% 85%;
 
-    --border: 215 20% 22%;
-    --input: 215 20% 22%;
-    --ring: 215 70% 55%;
+    --border: 215 12% 24%;
+    --input: 215 12% 24%;
+    --ring: 215 15% 35%;
 
-    --success: 145 60% 50%;
-    --success-foreground: 215 30% 10%;
+    --success: 145 20% 45%;
+    --success-foreground: 210 10% 85%;
 
-    --warning: 35 85% 60%;
-    --warning-foreground: 215 30% 10%;
+    --warning: 35 30% 50%;
+    --warning-foreground: 210 10% 85%;
 
-    --info: 210 80% 60%;
-    --info-foreground: 215 30% 10%;
+    --info: 210 25% 50%;
+    --info-foreground: 210 10% 85%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(215 70% 55%), hsl(215 70% 65%));
-    --gradient-accent: linear-gradient(135deg, hsl(185 60% 50%), hsl(185 60% 60%));
-    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 10%), hsl(215 25% 14%));
+    --gradient-primary: linear-gradient(135deg, hsl(215 15% 35%), hsl(215 15% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(215 12% 24%), hsl(215 12% 28%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 20% 12%), hsl(215 15% 16%));
 
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
     --shadow-md: 0 2px 8px -2px hsl(0 0% 0% / 0.3);

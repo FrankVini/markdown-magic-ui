@@ -8,20 +8,20 @@ interface BadgeProps {
 
 export const Badge = ({ variant, children, className }: BadgeProps) => {
   const variants = {
-    implemented: "bg-success text-success-foreground",
-    review: "bg-warning text-warning-foreground",
-    planned: "bg-muted text-muted-foreground",
+    implemented: "bg-success",
+    review: "bg-warning",
+    planned: "bg-muted",
   };
 
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium",
+        "inline-flex items-center justify-center w-6 h-6 rounded-full",
         variants[variant],
         className
       )}
     >
-      {children}
+      <span className="sr-only">{children}</span>
     </span>
   );
 };

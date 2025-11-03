@@ -75,19 +75,31 @@ const Index = () => {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">Mapeamento de Dados</span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-success text-success">✅ Completo</span>
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
+                        <span className="text-xs font-medium text-foreground">Completo</span>
+                      </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">Políticas de Privacidade</span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-success text-success">✅ Completo</span>
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
+                        <span className="text-xs font-medium text-foreground">Completo</span>
+                      </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">Consentimento</span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-warning text-warning">🟡 Em Revisão</span>
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
+                        <span className="text-xs font-medium text-foreground">Em Revisão</span>
+                      </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">Relatórios de Impacto</span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-warning text-warning">🟡 Em Andamento</span>
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
+                        <span className="text-xs font-medium text-foreground">Em Andamento</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -130,17 +142,32 @@ const Index = () => {
                       <tr className="hover:bg-secondary/50 transition-colors">
                         <td className="px-4 py-3 text-sm">Atualizar Política de Privacidade</td>
                         <td className="px-4 py-3 text-sm text-muted-foreground">Jurídico</td>
-                        <td className="px-4 py-3"><span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-warning text-warning">🟡 Em Andamento</span></td>
+                        <td className="px-4 py-3">
+                          <div className="flex items-center gap-2">
+                            <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
+                            <span className="text-xs font-medium text-foreground">Em Andamento</span>
+                          </div>
+                        </td>
                       </tr>
                       <tr className="hover:bg-secondary/50 transition-colors">
                         <td className="px-4 py-3 text-sm">Revisar Contratos com Terceiros</td>
                         <td className="px-4 py-3 text-sm text-muted-foreground">Jurídico / SI</td>
-                        <td className="px-4 py-3"><span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-info text-info">🔵 Planejado</span></td>
+                        <td className="px-4 py-3">
+                          <div className="flex items-center gap-2">
+                            <span className="inline-flex w-6 h-6 rounded-full bg-info"></span>
+                            <span className="text-xs font-medium text-foreground">Planejado</span>
+                          </div>
+                        </td>
                       </tr>
                       <tr className="hover:bg-secondary/50 transition-colors">
                         <td className="px-4 py-3 text-sm">Treinamento LGPD - Equipe</td>
                         <td className="px-4 py-3 text-sm text-muted-foreground">RH / SI</td>
-                        <td className="px-4 py-3"><span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-success text-success">✅ Ativo</span></td>
+                        <td className="px-4 py-3">
+                          <div className="flex items-center gap-2">
+                            <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
+                            <span className="text-xs font-medium text-foreground">Ativo</span>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>

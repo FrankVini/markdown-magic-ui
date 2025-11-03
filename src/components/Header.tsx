@@ -104,57 +104,51 @@ export const Header = () => {
         </div>
       </header>
       
-      <div className="flex items-center gap-6 px-4">
-        <div className="flex items-center gap-3">
-          <span className="text-sm font-medium text-foreground">Modo:</span>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={toggleTheme}
-            className="gap-2"
-          >
-            {theme === "light" ? (
-              <>
-                <Sun className="w-4 h-4" />
-                Claro
-              </>
-            ) : (
-              <>
-                <Moon className="w-4 h-4" />
-                Escuro
-              </>
-            )}
-          </Button>
-        </div>
+      <div className="flex items-center gap-4 px-4">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={toggleTheme}
+          className="gap-2"
+        >
+          {theme === "light" ? (
+            <>
+              <Sun className="w-4 h-4" />
+              Claro
+            </>
+          ) : (
+            <>
+              <Moon className="w-4 h-4" />
+              Escuro
+            </>
+          )}
+        </Button>
         
-        <div className="flex items-center gap-3">
-          <span className="text-sm font-medium text-foreground">Linguagem:</span>
-          <Select value={language} onValueChange={setLanguage}>
-            <SelectTrigger className="w-[140px]">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="bg-background z-50">
-              <SelectItem value="pt">
-                <div className="flex items-center gap-2">
-                  <span>🇧🇷</span>
-                  <span>Português</span>
-                </div>
-              </SelectItem>
-              <SelectItem value="en">
-                <div className="flex items-center gap-2">
-                  <span>🇺🇸</span>
-                  <span>English</span>
-                </div>
-              </SelectItem>
-              <SelectItem value="es">
-                <div className="flex items-center gap-2">
-                  <span>🇪🇸</span>
-                  <span>Español</span>
-                </div>
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+        <Select value={language} onValueChange={setLanguage}>
+          <SelectTrigger className="w-[140px]">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent className="bg-background z-50">
+            <SelectItem value="pt">
+              <div className="flex items-center gap-2">
+                <span>🇧🇷</span>
+                <span>Português</span>
+              </div>
+            </SelectItem>
+            <SelectItem value="en">
+              <div className="flex items-center gap-2">
+                <span>🇺🇸</span>
+                <span>English</span>
+              </div>
+            </SelectItem>
+            <SelectItem value="es">
+              <div className="flex items-center gap-2">
+                <span>🇪🇸</span>
+                <span>Español</span>
+              </div>
+            </SelectItem>
+          </SelectContent>
+        </Select>
       </div>
     </div>
   );

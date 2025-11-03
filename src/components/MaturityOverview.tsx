@@ -1,4 +1,6 @@
 import { TrendingUp } from "lucide-react";
+import { Badge } from "./Badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const maturityData = [
   { domain: "A.5 — Política e Organização", score: 8.5, status: "implemented" as const, docs: "POL-SGSI-001 / POL-SGSI-002 / NRM-GR-001", nextAction: "Criar repositório acessível e registrar atas CGSIP" },
@@ -23,30 +25,8 @@ const getScoreColor = (score: number) => {
   return "text-destructive";
 };
 
-const getScoreEmoji = (score: number) => {
-  if (score >= 8) return "🟩";
-  if (score >= 7) return "🟨";
-  return "🟥";
-};
-
-const getStatusBadge = (status: "implemented" | "review") => {
-  if (status === "implemented") {
-    return (
-      <div className="flex items-center gap-2">
-        <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
-        <span className="text-xs font-medium text-foreground">Implementado</span>
-      </div>
-    );
-  }
-  return (
-    <div className="flex items-center gap-2">
-      <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
-      <span className="text-xs font-medium text-foreground">Em Revisão</span>
-    </div>
-  );
-};
-
 export const MaturityOverview = () => {
+  const { t } = useLanguage();
   const avgScore = (maturityData.reduce((acc, item) => acc + item.score, 0) / maturityData.length).toFixed(1);
 
   return (
@@ -56,8 +36,8 @@ export const MaturityOverview = () => {
           <TrendingUp className="w-5 h-5 text-success" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-foreground">Visão Geral de Maturidade</h2>
-          <p className="text-sm text-muted-foreground">Score médio global: <span className="font-semibold text-success">{avgScore}/10</span></p>
+          <h2 className="text-2xl font-bold text-foreground">{t.maturityOverview}</h2>
+          <p className="text-sm text-muted-foreground">{t.avgScore}: <span className="font-semibold text-success">{avgScore}/10</span></p>
         </div>
       </div>
       
@@ -67,19 +47,19 @@ export const MaturityOverview = () => {
             <thead className="bg-secondary">
               <tr>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Domínio ISO
+                  {t.domain}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Maturidade
+                  {t.maturity}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Status
+                  {t.status}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Documentos-Chave
+                  {t.keyDocs}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Próxima Ação
+                  {t.nextAction}
                 </th>
               </tr>
             </thead>
@@ -90,13 +70,12 @@ export const MaturityOverview = () => {
                     <span className="text-sm font-semibold text-foreground">{item.domain}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center gap-2">
-                      <span>{getScoreEmoji(item.score)}</span>
-                      <span className={`text-sm font-bold ${getScoreColor(item.score)}`}>{item.score}</span>
-                    </div>
+                    <span className={`text-sm font-bold ${getScoreColor(item.score)}`}>{item.score}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {getStatusBadge(item.status)}
+                    <Badge variant={item.status} showLabel>
+                      {item.status === "implemented" ? t.implemented : t.inReview}
+                    </Badge>
                   </td>
                   <td className="px-6 py-4">
                     <span className="text-sm text-muted-foreground font-mono">{item.docs}</span>

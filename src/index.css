@@ -93,13 +93,13 @@ All colors MUST be HSL.
     --input: 215 12% 24%;
     --ring: 215 15% 35%;
 
-    --success: 145 20% 45%;
+    --success: 95 38% 42%;
     --success-foreground: 210 10% 85%;
 
-    --warning: 35 30% 50%;
+    --warning: 43 74% 49%;
     --warning-foreground: 210 10% 85%;
 
-    --info: 210 25% 50%;
+    --info: 262 52% 47%;
     --info-foreground: 210 10% 85%;
 
     --gradient-primary: linear-gradient(135deg, hsl(215 15% 35%), hsl(215 15% 40%));

@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Session } from "@supabase/supabase-js";
+import { useLanguage } from "@/contexts/LanguageContext";
+import type { Language } from "@/lib/translations";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -13,7 +15,7 @@ export const Header = () => {
   const [selectedCompany, setSelectedCompany] = useState("none");
   const [session, setSession] = useState<Session | null>(null);
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [language, setLanguage] = useState("pt");
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -69,7 +71,7 @@ export const Header = () => {
           </div>
           <div className="flex-1 min-w-[200px]">
             <h1 className="text-3xl font-bold">DOMONET {selectedCompany !== "none" ? selectedCompany : ""}</h1>
-            <p className="text-primary-foreground/90 text-sm">Sumário Consolidado ISO/IEC 27001:2022</p>
+            <p className="text-primary-foreground/90 text-sm">{t.subtitle}</p>
           </div>
           <div className="flex items-center gap-3">
             <Select value={selectedCompany} onValueChange={setSelectedCompany}>
@@ -114,17 +116,17 @@ export const Header = () => {
           {theme === "light" ? (
             <>
               <Sun className="w-4 h-4" />
-              Claro
+              {language === "pt" ? "Claro" : language === "en" ? "Light" : "Claro"}
             </>
           ) : (
             <>
               <Moon className="w-4 h-4" />
-              Escuro
+              {language === "pt" ? "Escuro" : language === "en" ? "Dark" : "Oscuro"}
             </>
           )}
         </Button>
         
-        <Select value={language} onValueChange={setLanguage}>
+        <Select value={language} onValueChange={(value) => setLanguage(value as Language)}>
           <SelectTrigger className="w-[140px]">
             <SelectValue />
           </SelectTrigger>

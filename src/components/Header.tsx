@@ -64,7 +64,7 @@ export const Header = () => {
 
   return (
     <div className="mb-8 space-y-4">
-      <header className="bg-gradient-primary text-primary-foreground py-8 px-6 rounded-2xl shadow-xl">
+      <header className="bg-gradient-primary dark:bg-black text-primary-foreground py-8 px-6 rounded-2xl shadow-xl">
         <div className="flex items-center gap-4 mb-4 flex-wrap">
           <div className="bg-primary-foreground/20 p-3 rounded-xl">
             <Shield className="w-8 h-8" />
@@ -111,7 +111,7 @@ export const Header = () => {
           variant="outline"
           size="sm"
           onClick={toggleTheme}
-          className="gap-2"
+          className="gap-2 hover:bg-primary dark:hover:bg-primary-foreground/10"
         >
           {theme === "light" ? (
             <>

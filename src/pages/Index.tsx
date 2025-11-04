@@ -11,6 +11,7 @@ import { Badge } from "@/components/Badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { CheckCircle2 } from "lucide-react";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -49,20 +50,38 @@ const Index = () => {
               </p>
               <div className="space-y-6">
                 <div className="p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold text-lg mb-4 text-warning">{t.pentestInProgress}</h3>
-                  <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>{t.pentestDomoFacial}</li>
+                  <h3 className="font-semibold text-lg mb-4 text-in-progress">{t.pentestInProgress}</h3>
+                  <ul className="text-muted-foreground space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-in-progress mt-0.5 flex-shrink-0" />
+                      <span>{t.pentestDomoFacial}</span>
+                    </li>
                   </ul>
                 </div>
                 
                 <div className="p-6 rounded-lg border border-border">
                   <h3 className="font-semibold text-lg mb-4 text-success">{t.pentestCompleted}</h3>
-                  <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>{t.pentestSystemAccelero}</li>
-                    <li>{t.pentestSystemOzone}</li>
-                    <li>{t.pentestGateway}</li>
-                    <li>{t.pentestFacialPlate}</li>
-                    <li>{t.pentestDomocam}</li>
+                  <ul className="text-muted-foreground space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                      <span>{t.pentestSystemAccelero}</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                      <span>{t.pentestSystemOzone}</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                      <span>{t.pentestGateway}</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                      <span>{t.pentestFacialPlate}</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                      <span>{t.pentestDomocam}</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -93,14 +112,14 @@ const Index = () => {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">{t.consent}</span>
                       <div className="flex items-center gap-2">
-                        <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
+                        <span className="inline-flex w-6 h-6 rounded-full bg-review"></span>
                         <span className="text-xs font-medium text-foreground">{t.inReview}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">{t.impactReports}</span>
                       <div className="flex items-center gap-2">
-                        <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
+                        <span className="inline-flex w-6 h-6 rounded-full bg-in-progress"></span>
                         <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                       </div>
                     </div>
@@ -147,7 +166,7 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
+                            <span className="inline-flex w-6 h-6 rounded-full bg-in-progress"></span>
                             <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                           </div>
                         </td>

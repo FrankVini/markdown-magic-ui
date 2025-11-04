@@ -23,7 +23,7 @@ export const NextSteps = () => {
       <section>
         <div className="flex items-center gap-3 mb-6">
           <div className="bg-info/10 p-2 rounded-lg">
-            <Target className="w-5 h-5 text-info" />
+            <Target className="w-5 h-5 text-info dark:text-info" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-foreground">Próximas Etapas Estratégicas</h2>
@@ -45,7 +45,7 @@ export const NextSteps = () => {
       <section>
         <div className="flex items-center gap-3 mb-6">
           <div className="bg-accent/10 p-2 rounded-lg">
-            <Calendar className="w-5 h-5 text-accent" />
+            <Calendar className="w-5 h-5 text-accent dark:text-accent" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-foreground">Indicadores Gerais</h2>

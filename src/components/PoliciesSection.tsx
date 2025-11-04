@@ -88,8 +88,8 @@ export const PoliciesSection = () => {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="bg-primary/10 p-2 rounded-lg">
-          <FileText className="w-5 h-5 text-primary" />
+        <div className="p-2 rounded-lg" style={{ backgroundColor: 'hsl(207 26% 54% / 0.1)' }}>
+          <FileText className="w-5 h-5" style={{ color: 'hsl(207 26% 54%)' }} />
         </div>
         <div>
           <h2 className="text-2xl font-bold text-foreground">Políticas (POL)</h2>
@@ -130,7 +130,8 @@ export const PoliciesSection = () => {
                       href={index === 0 ? "/documents/Politica_Iongrade_1.pdf" : "about:blank"}
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm font-mono font-medium text-primary hover:underline cursor-pointer"
+                      className="text-sm font-mono font-medium hover:underline cursor-pointer dark:text-white"
+                      style={{ color: 'hsl(207 26% 54%)' }}
                     >
                       {policy.code}
                     </a>

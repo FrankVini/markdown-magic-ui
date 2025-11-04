@@ -10,8 +10,11 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/Badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-gradient-subtle">
       <div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -20,10 +23,10 @@ const Index = () => {
         
         <Tabs defaultValue="documentos" className="mt-8">
           <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4 mb-8">
-            <TabsTrigger value="documentos">Documentos</TabsTrigger>
-            <TabsTrigger value="maturidade">Maturidade</TabsTrigger>
-            <TabsTrigger value="pentest">Pentest</TabsTrigger>
-            <TabsTrigger value="lgpd">LGPD</TabsTrigger>
+            <TabsTrigger value="documentos">{t.tabDocuments}</TabsTrigger>
+            <TabsTrigger value="maturidade">{t.tabMaturity}</TabsTrigger>
+            <TabsTrigger value="pentest">{t.tabPentest}</TabsTrigger>
+            <TabsTrigger value="lgpd">{t.tabLgpd}</TabsTrigger>
           </TabsList>
           
           <TabsContent value="documentos" className="space-y-8">
@@ -40,26 +43,26 @@ const Index = () => {
           
           <TabsContent value="pentest" className="space-y-8">
             <div className="bg-card rounded-xl shadow-lg p-6 border border-border">
-              <h2 className="text-2xl font-bold mb-6 text-foreground">Testes de Penetração (Pentest)</h2>
+              <h2 className="text-2xl font-bold mb-6 text-foreground">{t.pentestTitle}</h2>
               <p className="text-muted-foreground mb-6">
-                Avaliações especializadas de segurança que simulam ataques reais para identificar vulnerabilidades em sistemas, aplicações e infraestrutura, garantindo a proteção proativa dos ativos críticos da organização.
+                {t.pentestDesc}
               </p>
               <div className="space-y-6">
                 <div className="p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold text-lg mb-4 text-warning">Pentest em Progresso</h3>
+                  <h3 className="font-semibold text-lg mb-4 text-warning">{t.pentestInProgress}</h3>
                   <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>DomoFacial</li>
+                    <li>{t.pentestDomoFacial}</li>
                   </ul>
                 </div>
                 
                 <div className="p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold text-lg mb-4 text-success">Pentests Concluídos</h3>
+                  <h3 className="font-semibold text-lg mb-4 text-success">{t.pentestCompleted}</h3>
                   <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                    <li>Sistema Accelero</li>
-                    <li>Sistema Ozone</li>
-                    <li>Gateway Iongrade</li>
-                    <li>Placa Facial</li>
-                    <li>Domocam</li>
+                    <li>{t.pentestSystemAccelero}</li>
+                    <li>{t.pentestSystemOzone}</li>
+                    <li>{t.pentestGateway}</li>
+                    <li>{t.pentestFacialPlate}</li>
+                    <li>{t.pentestDomocam}</li>
                   </ul>
                 </div>
               </div>
@@ -68,104 +71,104 @@ const Index = () => {
           
           <TabsContent value="lgpd" className="space-y-8">
             <div className="bg-card rounded-xl shadow-lg p-6 border border-border">
-              <h2 className="text-2xl font-bold mb-6 text-foreground">Lei Geral de Proteção de Dados (LGPD)</h2>
+              <h2 className="text-2xl font-bold mb-6 text-foreground">{t.lgpdTitle}</h2>
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold text-lg mb-4 text-foreground">Status de Conformidade</h3>
+                  <h3 className="font-semibold text-lg mb-4 text-foreground">{t.complianceStatus}</h3>
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Mapeamento de Dados</span>
+                      <span className="text-sm text-muted-foreground">{t.dataMapping}</span>
                       <div className="flex items-center gap-2">
                         <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
-                        <span className="text-xs font-medium text-foreground">Completo</span>
+                        <span className="text-xs font-medium text-foreground">{t.complete}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Políticas de Privacidade</span>
+                      <span className="text-sm text-muted-foreground">{t.privacyPolicies}</span>
                       <div className="flex items-center gap-2">
                         <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
-                        <span className="text-xs font-medium text-foreground">Completo</span>
+                        <span className="text-xs font-medium text-foreground">{t.complete}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Consentimento</span>
+                      <span className="text-sm text-muted-foreground">{t.consent}</span>
                       <div className="flex items-center gap-2">
                         <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
-                        <span className="text-xs font-medium text-foreground">Em Revisão</span>
+                        <span className="text-xs font-medium text-foreground">{t.inReview}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Relatórios de Impacto</span>
+                      <span className="text-sm text-muted-foreground">{t.impactReports}</span>
                       <div className="flex items-center gap-2">
                         <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
-                        <span className="text-xs font-medium text-foreground">Em Andamento</span>
+                        <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold text-lg mb-4 text-foreground">Dados Pessoais Mapeados</h3>
+                  <h3 className="font-semibold text-lg mb-4 text-foreground">{t.dataMapped}</h3>
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Dados Cadastrais</span>
-                      <span className="text-xs font-medium text-primary">Cliente/Funcionário</span>
+                      <span className="text-sm text-muted-foreground">{t.registrationData}</span>
+                      <span className="text-xs font-medium text-primary">{t.dataTypeClientEmployee}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Dados Financeiros</span>
-                      <span className="text-xs font-medium text-primary">Cliente</span>
+                      <span className="text-sm text-muted-foreground">{t.financialData}</span>
+                      <span className="text-xs font-medium text-primary">{t.dataTypeClient}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Logs de Acesso</span>
-                      <span className="text-xs font-medium text-primary">Usuários</span>
+                      <span className="text-sm text-muted-foreground">{t.accessLogs}</span>
+                      <span className="text-xs font-medium text-primary">{t.dataTypeUsers}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Imagens (CFTV)</span>
-                      <span className="text-xs font-medium text-primary">Visitantes</span>
+                      <span className="text-sm text-muted-foreground">{t.images}</span>
+                      <span className="text-xs font-medium text-primary">{t.dataTypeVisitors}</span>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="mt-6 p-6 rounded-lg border border-border">
-                <h3 className="font-semibold text-lg mb-4 text-foreground">Ações</h3>
+                <h3 className="font-semibold text-lg mb-4 text-foreground">{t.actions}</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead className="bg-secondary">
                       <tr>
-                        <th className="px-4 py-3 text-left text-xs font-semibold text-secondary-foreground uppercase">Ação</th>
-                        <th className="px-4 py-3 text-left text-xs font-semibold text-secondary-foreground uppercase">Responsável</th>
-                        <th className="px-4 py-3 text-left text-xs font-semibold text-secondary-foreground uppercase">Status</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-secondary-foreground uppercase">{t.action}</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-secondary-foreground uppercase">{t.responsible}</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-secondary-foreground uppercase">{t.status}</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-border">
                       <tr className="hover:bg-secondary/50 transition-colors">
-                        <td className="px-4 py-3 text-sm">Atualizar Política de Privacidade</td>
-                        <td className="px-4 py-3 text-sm text-muted-foreground">Jurídico</td>
+                        <td className="px-4 py-3 text-sm">{t.lgpdUpdatePrivacyPolicy}</td>
+                        <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
                             <span className="inline-flex w-6 h-6 rounded-full bg-warning"></span>
-                            <span className="text-xs font-medium text-foreground">Em Andamento</span>
+                            <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                           </div>
                         </td>
                       </tr>
                       <tr className="hover:bg-secondary/50 transition-colors">
-                        <td className="px-4 py-3 text-sm">Revisar Contratos com Terceiros</td>
-                        <td className="px-4 py-3 text-sm text-muted-foreground">Jurídico / SI</td>
+                        <td className="px-4 py-3 text-sm">{t.lgpdReviewContracts}</td>
+                        <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS} / {t.areaInfoSecurity}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
                             <span className="inline-flex w-6 h-6 rounded-full bg-info"></span>
-                            <span className="text-xs font-medium text-foreground">Planejado</span>
+                            <span className="text-xs font-medium text-foreground">{t.planned}</span>
                           </div>
                         </td>
                       </tr>
                       <tr className="hover:bg-secondary/50 transition-colors">
-                        <td className="px-4 py-3 text-sm">Treinamento LGPD - Equipe</td>
-                        <td className="px-4 py-3 text-sm text-muted-foreground">RH / SI</td>
+                        <td className="px-4 py-3 text-sm">{t.lgpdTraining}</td>
+                        <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaHRIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
                             <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
-                            <span className="text-xs font-medium text-foreground">Ativo</span>
+                            <span className="text-xs font-medium text-foreground">{t.active}</span>
                           </div>
                         </td>
                       </tr>

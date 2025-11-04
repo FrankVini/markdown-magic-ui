@@ -20,8 +20,8 @@ export const NormsSection = () => {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="bg-accent/10 p-2 rounded-lg">
-          <Settings className="w-5 h-5 text-accent" />
+        <div className="p-2 rounded-lg" style={{ backgroundColor: 'hsl(207 26% 54% / 0.1)' }}>
+          <Settings className="w-5 h-5" style={{ color: 'hsl(207 26% 54%)' }} />
         </div>
         <div>
           <h2 className="text-2xl font-bold text-foreground">Normas (NRM)</h2>
@@ -62,7 +62,8 @@ export const NormsSection = () => {
                       href="about:blank" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm font-mono font-medium text-accent hover:underline cursor-pointer"
+                      className="text-sm font-mono font-medium hover:underline cursor-pointer dark:text-white"
+                      style={{ color: 'hsl(207 26% 54%)' }}
                     >
                       {norm.code}
                     </a>

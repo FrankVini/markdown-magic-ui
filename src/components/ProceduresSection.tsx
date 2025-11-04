@@ -20,8 +20,8 @@ export const ProceduresSection = () => {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="bg-info/10 p-2 rounded-lg">
-          <Wrench className="w-5 h-5 text-info" />
+        <div className="p-2 rounded-lg" style={{ backgroundColor: 'hsl(207 26% 54% / 0.1)' }}>
+          <Wrench className="w-5 h-5" style={{ color: 'hsl(207 26% 54%)' }} />
         </div>
         <div>
           <h2 className="text-2xl font-bold text-foreground">Procedimentos (PRO)</h2>
@@ -62,7 +62,8 @@ export const ProceduresSection = () => {
                       href="about:blank" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm font-mono font-medium text-info hover:underline cursor-pointer"
+                      className="text-sm font-mono font-medium hover:underline cursor-pointer dark:text-white"
+                      style={{ color: 'hsl(207 26% 54%)' }}
                     >
                       {proc.code}
                     </a>

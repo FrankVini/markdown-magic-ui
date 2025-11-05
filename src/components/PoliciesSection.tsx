@@ -133,10 +133,13 @@ export const PoliciesSection = () => {
                       href={index === 0 ? "/documents/Politica_Iongrade_1.pdf" : "about:blank"}
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm font-mono font-medium hover:underline cursor-pointer dark:text-white"
+                      className="text-sm font-mono font-medium hover:underline cursor-pointer dark:text-white inline-flex items-center gap-2"
                       style={{ color: 'hsl(207 26% 54%)' }}
                     >
-                      {policy.code}
+                      {policy.code === "POL-EUC-001" && (
+                        <span className="inline-flex w-6 h-6 rounded-full bg-review"></span>
+                      )}
+                      <span>{policy.code}</span>
                     </a>
                   </td>
                   <td className="px-6 py-4">

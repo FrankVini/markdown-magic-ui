@@ -47,19 +47,19 @@ All colors MUST be HSL.
     --link-foreground: 0 0% 100%;
 
     /* Status colors with institutional feel */
-    --success: 120 100% 37%;
+    --success: 120 100% 37%; /* #00BB00 */
     --success-foreground: 0 0% 100%;
 
     --warning: 25 100% 51%;
     --warning-foreground: 0 0% 100%;
 
-    --info: 232 100% 47%;
+    --info: 232 94% 51%; /* #0e3eff */
     --info-foreground: 0 0% 100%;
     
-    --review: 288 100% 40%;
+    --review: 288 100% 40%; /* #CC00FF */
     --review-foreground: 0 0% 100%;
     
-    --in-progress: 25 100% 51%;
+    --in-progress: 25 100% 51%; /* #FF6600 */
     --in-progress-foreground: 0 0% 100%;
 
     /* Professional gradients */
@@ -106,19 +106,19 @@ All colors MUST be HSL.
     --link: 207 26% 54%;
     --link-foreground: 210 10% 85%;
 
-    --success: 120 100% 37%;
+    --success: 120 100% 37%; /* #00BB00 */
     --success-foreground: 0 0% 100%;
 
     --warning: 25 100% 51%;
     --warning-foreground: 0 0% 100%;
 
-    --info: 232 100% 47%;
+    --info: 232 94% 51%; /* #0e3eff */
     --info-foreground: 0 0% 100%;
     
-    --review: 288 100% 40%;
+    --review: 288 100% 40%; /* #CC00FF */
     --review-foreground: 0 0% 100%;
     
-    --in-progress: 25 100% 51%;
+    --in-progress: 25 100% 51%; /* #FF6600 */
     --in-progress-foreground: 0 0% 100%;
 
     --gradient-primary: linear-gradient(135deg, hsl(215 15% 35%), hsl(215 15% 40%));

@@ -50,10 +50,10 @@ const Index = () => {
               </p>
               <div className="space-y-6">
                 <div className="p-6 rounded-lg border border-border">
-                  <h3 className="font-semibold text-lg mb-4 text-in-progress">{t.pentestInProgress}</h3>
+                  <h3 className="font-semibold text-lg mb-4" style={{ color: 'hsl(25 100% 51%)' }}>{t.pentestInProgress}</h3>
                   <ul className="text-muted-foreground space-y-3">
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-in-progress mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(25 100% 51%)' }} />
                       <span>{t.pentestDomoFacial}</span>
                     </li>
                   </ul>
@@ -110,16 +110,20 @@ const Index = () => {
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">{t.consent}</span>
                       <div className="flex items-center gap-2">
                         <span className="inline-flex w-6 h-6 rounded-full bg-review"></span>
+                        <span className="text-sm text-muted-foreground">{t.consent}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
                         <span className="text-xs font-medium text-foreground">{t.inReview}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">{t.impactReports}</span>
                       <div className="flex items-center gap-2">
                         <span className="inline-flex w-6 h-6 rounded-full bg-in-progress"></span>
+                        <span className="text-sm text-muted-foreground">{t.impactReports}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
                         <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                       </div>
                     </div>
@@ -162,13 +166,15 @@ const Index = () => {
                     </thead>
                     <tbody className="divide-y divide-border">
                       <tr className="hover:bg-secondary/50 transition-colors">
-                        <td className="px-4 py-3 text-sm">{t.lgpdUpdatePrivacyPolicy}</td>
-                        <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
                             <span className="inline-flex w-6 h-6 rounded-full bg-in-progress"></span>
-                            <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
+                            <span className="text-sm">{t.lgpdUpdatePrivacyPolicy}</span>
                           </div>
+                        </td>
+                        <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS}</td>
+                        <td className="px-4 py-3">
+                          <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                         </td>
                       </tr>
                       <tr className="hover:bg-secondary/50 transition-colors">

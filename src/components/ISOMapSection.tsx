@@ -43,19 +43,31 @@ export const ISOMapSection = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              {isoMap.map((item, index) => (
-                <tr key={index} className="hover:bg-secondary/50 transition-colors">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm font-semibold text-foreground">{item.domain}</span>
-                  </td>
-                  <td className="px-6 py-4">
-                    <span className="text-sm text-muted-foreground">{item.controls}</span>
-                  </td>
-                  <td className="px-6 py-4">
-                    <span className="text-sm text-muted-foreground font-mono">{item.docs}</span>
-                  </td>
-                </tr>
-              ))}
+              {isoMap.map((item, index) => {
+                const needsCircle = item.domain === "A.7 — Físico" || item.domain === "A.9 — Acesso" || item.domain === "A.11 — Infraestrutura";
+                const circleColor = item.domain === "A.7 — Físico" ? "bg-success" : 
+                                   item.domain === "A.9 — Acesso" ? "bg-success" : 
+                                   "bg-success";
+                
+                return (
+                  <tr key={index} className="hover:bg-secondary/50 transition-colors">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center gap-2">
+                        {needsCircle && (
+                          <span className={`inline-flex w-6 h-6 rounded-full ${circleColor}`}></span>
+                        )}
+                        <span className="text-sm font-semibold text-foreground">{item.domain}</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <span className="text-sm text-muted-foreground">{item.controls}</span>
+                    </td>
+                    <td className="px-6 py-4">
+                      <span className="text-sm text-muted-foreground font-mono">{item.docs}</span>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

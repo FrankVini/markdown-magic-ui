@@ -1,10 +1,7 @@
 import { Shield, Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
-  const { t } = useLanguage();
-  
   return (
     <footer className="bg-card border-t border-border mt-16">
       <div className="container mx-auto px-4 py-12 max-w-7xl">
@@ -18,13 +15,13 @@ export const Footer = () => {
               <span className="font-semibold text-lg">DOMONET</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              {t.companyDesc}
+              Soluções em segurança da informação e conformidade ISO/IEC 27001.
             </p>
           </div>
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-base">{t.contact}</h3>
+            <h3 className="font-semibold text-base">Contato</h3>
             <div className="space-y-3 text-sm">
               <a 
                 href="mailto:soc@domonet.com.br" 
@@ -49,7 +46,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-base">{t.usefulLinks}</h3>
+            <h3 className="font-semibold text-base">Links Úteis</h3>
             <nav className="space-y-3 text-sm">
               <a 
                 href="https://domonet.com.br" 
@@ -57,7 +54,7 @@ export const Footer = () => {
                 rel="noopener noreferrer" 
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t.institutionalSite}
+                Site Institucional
               </a>
               <a 
                 href="https://domonet.com.br/servicos" 
@@ -65,7 +62,7 @@ export const Footer = () => {
                 rel="noopener noreferrer" 
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t.ourServices}
+                Nossos Serviços
               </a>
               <a 
                 href="https://domonet.com.br/sobre" 
@@ -73,37 +70,37 @@ export const Footer = () => {
                 rel="noopener noreferrer" 
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t.aboutUs}
+                Sobre Nós
               </a>
             </nav>
           </div>
 
           {/* Policies & Social */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-base">{t.policiesFooter}</h3>
+            <h3 className="font-semibold text-base">Políticas</h3>
             <nav className="space-y-3 text-sm mb-6">
               <a 
                 href="#" 
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t.privacyPolicy}
+                Política de Privacidade
               </a>
               <a 
                 href="#" 
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t.termsOfUse}
+                Termos de Uso
               </a>
               <a 
                 href="#" 
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                {t.securityPolicy}
+                Política de Segurança
               </a>
             </nav>
             
             <div className="space-y-3">
-              <h4 className="font-semibold text-sm">{t.socialNetworks}</h4>
+              <h4 className="font-semibold text-sm">Redes Sociais</h4>
               <div className="flex gap-3">
                 <a 
                   href="https://www.linkedin.com/company/domomed/posts/?feedView=all" 
@@ -135,13 +132,13 @@ export const Footer = () => {
         {/* Bottom Section */}
         <div className="space-y-4 text-center">
           <div className="text-sm text-muted-foreground space-y-2">
-            <p>{t.reviewPeriod}</p>
-            <p>{t.reviewResponsible}</p>
-            <p>{t.lastReview}</p>
+            <p>Periodicidade média de revisão: 12 meses</p>
+            <p>Responsável pela revisão: CGSIP / Segurança da Informação</p>
+            <p>Última revisão geral: Agosto – Outubro 2025</p>
           </div>
           <Separator className="my-4" />
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} DOMONET. {t.copyright}
+            © {new Date().getFullYear()} DOMONET. Todos os direitos reservados.
           </p>
         </div>
       </div>

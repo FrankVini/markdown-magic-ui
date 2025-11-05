@@ -1,93 +1,90 @@
 import { Badge } from "./Badge";
 import { FileText } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const policies = [
   {
     code: "POL-SGSI-001",
-    titleKey: "policyInfoSecurity" as const,
+    title: "Política de Segurança da Informação",
     control: "A.5.1 / A.5.2",
-    areaKey: "areaInfoSecurity" as const,
+    area: "Segurança da Informação",
     status: "implemented" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-SGSI-002",
-    titleKey: "policyCommittee" as const,
+    title: "Comitê de Segurança da Informação e Privacidade",
     control: "A.5.2 / A.5.3",
-    areaKey: "areaInfoSecurity" as const,
+    area: "Segurança da Informação",
     status: "implemented" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-PCN-001",
-    titleKey: "policyBusinessContinuity" as const,
+    title: "Política de Continuidade de Negócios",
     control: "A.17.1 / A.17.2",
-    areaKey: "areaSecurityInfra" as const,
+    area: "Segurança / Infraestrutura",
     status: "implemented" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-RET-001",
-    titleKey: "policyDataRetention" as const,
+    title: "Política de Retenção de Dados",
     control: "A.5.33 / A.8.10",
-    areaKey: "areaLegalIS" as const,
+    area: "Jurídico / SI",
     status: "implemented" as const,
-    reviewKey: "biennial" as const
+    review: "Bienal"
   },
   {
     code: "POL-MAL-001",
-    titleKey: "policyMalwareProtection" as const,
+    title: "Política de Proteção contra Códigos Maliciosos",
     control: "A.8.7 / A.8.8",
-    areaKey: "areaSecuritySupport" as const,
+    area: "Segurança / Suporte",
     status: "implemented" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-PASS-001",
-    titleKey: "policyPasswords" as const,
+    title: "Política de Senhas",
     control: "A.9.2 / A.9.4",
-    areaKey: "areaInfraSecurity" as const,
+    area: "Infraestrutura / Segurança",
     status: "implemented" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-TRANSFER-001",
-    titleKey: "policySecureTransfer" as const,
+    title: "Política de Transferência Segura de Informações",
     control: "A.13.2 / A.5.10",
-    areaKey: "areaSecurityInfraShort" as const,
+    area: "Segurança / Infra",
     status: "implemented" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-EUC-001",
-    titleKey: "policyEndUserControl" as const,
+    title: "Política de Controle de Computação do Usuário Final",
     control: "A.8.32 / A.9.4",
-    areaKey: "areaDevelopmentIS" as const,
+    area: "Desenvolvimento / SI",
     status: "review" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-DEV-MASK-001",
-    titleKey: "policyTestData" as const,
+    title: "Política de Uso de Dados em Ambientes de Teste",
     control: "A.8.10 / A.14.2",
-    areaKey: "areaDevelopmentIS" as const,
+    area: "Desenvolvimento / SI",
     status: "implemented" as const,
-    reviewKey: "annual" as const
+    review: "Anual"
   },
   {
     code: "POL-SOFT-001",
-    titleKey: "policySoftwareUse" as const,
+    title: "Política de Uso de Software",
     control: "A.8.9 / A.8.28",
-    areaKey: "areaInfraSupport" as const,
+    area: "Infra / Suporte",
     status: "implemented" as const,
-    reviewKey: "biennial" as const
+    review: "Bienal"
   }
 ];
 
 export const PoliciesSection = () => {
-  const { t } = useLanguage();
-  
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-6">
@@ -95,8 +92,8 @@ export const PoliciesSection = () => {
           <FileText className="w-5 h-5" style={{ color: 'hsl(207 26% 54%)' }} />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-foreground">{t.policies}</h2>
-          <p className="text-sm text-muted-foreground">{t.policiesSubtitle}</p>
+          <h2 className="text-2xl font-bold text-foreground">Políticas (POL)</h2>
+          <p className="text-sm text-muted-foreground">Diretrizes Estratégicas</p>
         </div>
       </div>
       
@@ -106,22 +103,22 @@ export const PoliciesSection = () => {
             <thead className="bg-secondary">
               <tr>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  {t.code}
+                  Código
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  {t.title}
+                  Título
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  {t.isoControl}
+                  Controle ISO
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  {t.responsibleArea}
+                  Área Responsável
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  {t.maturity}
+                  Maturidade
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  {t.review}
+                  Revisão
                 </th>
               </tr>
             </thead>
@@ -133,31 +130,28 @@ export const PoliciesSection = () => {
                       href={index === 0 ? "/documents/Politica_Iongrade_1.pdf" : "about:blank"}
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm font-mono font-medium hover:underline cursor-pointer dark:text-white inline-flex items-center gap-2"
+                      className="text-sm font-mono font-medium hover:underline cursor-pointer dark:text-white"
                       style={{ color: 'hsl(207 26% 54%)' }}
                     >
-                      {policy.code === "POL-EUC-001" && (
-                        <span className="inline-flex w-6 h-6 rounded-full bg-review"></span>
-                      )}
-                      <span>{policy.code}</span>
+                      {policy.code}
                     </a>
                   </td>
                   <td className="px-6 py-4">
-                    <span className="text-sm text-card-foreground">{t[policy.titleKey]}</span>
+                    <span className="text-sm text-card-foreground">{policy.title}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-sm text-muted-foreground font-mono">{policy.control}</span>
                   </td>
                   <td className="px-6 py-4">
-                    <span className="text-sm text-muted-foreground">{t[policy.areaKey]}</span>
+                    <span className="text-sm text-muted-foreground">{policy.area}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <Badge variant={policy.status} showLabel>
-                      {policy.status === "implemented" ? t.implemented : t.inReview}
+                    <Badge variant={policy.status}>
+                      {policy.status === "implemented" ? "✅ Implementado" : "🟡 Em Revisão"}
                     </Badge>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm text-muted-foreground">{t[policy.reviewKey]}</span>
+                    <span className="text-sm text-muted-foreground">{policy.review}</span>
                   </td>
                 </tr>
               ))}

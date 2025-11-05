@@ -20,7 +20,6 @@ export const translations = {
     planned: "Planejado",
     plannedDesc: "Previstos para elaboração",
     inProgress: "Em Andamento",
-    inProgressDesc: "Em desenvolvimento",
     
     // Policies Section
     policies: "Políticas (POL)",
@@ -205,7 +204,6 @@ export const translations = {
     planned: "Planned",
     plannedDesc: "Scheduled for development",
     inProgress: "In Progress",
-    inProgressDesc: "Under development",
     
     // Policies Section
     policies: "Policies (POL)",
@@ -390,7 +388,6 @@ export const translations = {
     planned: "Planificado",
     plannedDesc: "Previstos para elaboración",
     inProgress: "En Progreso",
-    inProgressDesc: "En desarrollo",
     
     // Policies Section
     policies: "Políticas (POL)",

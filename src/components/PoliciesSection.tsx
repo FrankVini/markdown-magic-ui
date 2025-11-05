@@ -1,90 +1,93 @@
 import { Badge } from "./Badge";
 import { FileText } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const policies = [
   {
     code: "POL-SGSI-001",
-    title: "Política de Segurança da Informação",
+    titleKey: "policyInfoSecurity" as const,
     control: "A.5.1 / A.5.2",
-    area: "Segurança da Informação",
+    areaKey: "areaInfoSecurity" as const,
     status: "implemented" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-SGSI-002",
-    title: "Comitê de Segurança da Informação e Privacidade",
+    titleKey: "policyCommittee" as const,
     control: "A.5.2 / A.5.3",
-    area: "Segurança da Informação",
+    areaKey: "areaInfoSecurity" as const,
     status: "implemented" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-PCN-001",
-    title: "Política de Continuidade de Negócios",
+    titleKey: "policyBusinessContinuity" as const,
     control: "A.17.1 / A.17.2",
-    area: "Segurança / Infraestrutura",
+    areaKey: "areaSecurityInfra" as const,
     status: "implemented" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-RET-001",
-    title: "Política de Retenção de Dados",
+    titleKey: "policyDataRetention" as const,
     control: "A.5.33 / A.8.10",
-    area: "Jurídico / SI",
+    areaKey: "areaLegalIS" as const,
     status: "implemented" as const,
-    review: "Bienal"
+    reviewKey: "biennial" as const
   },
   {
     code: "POL-MAL-001",
-    title: "Política de Proteção contra Códigos Maliciosos",
+    titleKey: "policyMalwareProtection" as const,
     control: "A.8.7 / A.8.8",
-    area: "Segurança / Suporte",
+    areaKey: "areaSecuritySupport" as const,
     status: "implemented" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-PASS-001",
-    title: "Política de Senhas",
+    titleKey: "policyPasswords" as const,
     control: "A.9.2 / A.9.4",
-    area: "Infraestrutura / Segurança",
+    areaKey: "areaInfraSecurity" as const,
     status: "implemented" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-TRANSFER-001",
-    title: "Política de Transferência Segura de Informações",
+    titleKey: "policySecureTransfer" as const,
     control: "A.13.2 / A.5.10",
-    area: "Segurança / Infra",
+    areaKey: "areaSecurityInfraShort" as const,
     status: "implemented" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-EUC-001",
-    title: "Política de Controle de Computação do Usuário Final",
+    titleKey: "policyEndUserControl" as const,
     control: "A.8.32 / A.9.4",
-    area: "Desenvolvimento / SI",
+    areaKey: "areaDevelopmentIS" as const,
     status: "review" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-DEV-MASK-001",
-    title: "Política de Uso de Dados em Ambientes de Teste",
+    titleKey: "policyTestData" as const,
     control: "A.8.10 / A.14.2",
-    area: "Desenvolvimento / SI",
+    areaKey: "areaDevelopmentIS" as const,
     status: "implemented" as const,
-    review: "Anual"
+    reviewKey: "annual" as const
   },
   {
     code: "POL-SOFT-001",
-    title: "Política de Uso de Software",
+    titleKey: "policySoftwareUse" as const,
     control: "A.8.9 / A.8.28",
-    area: "Infra / Suporte",
+    areaKey: "areaInfraSupport" as const,
     status: "implemented" as const,
-    review: "Bienal"
+    reviewKey: "biennial" as const
   }
 ];
 
 export const PoliciesSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-6">
@@ -92,8 +95,8 @@ export const PoliciesSection = () => {
           <FileText className="w-5 h-5" style={{ color: 'hsl(207 26% 54%)' }} />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-foreground">Políticas (POL)</h2>
-          <p className="text-sm text-muted-foreground">Diretrizes Estratégicas</p>
+          <h2 className="text-2xl font-bold text-foreground">{t.policies}</h2>
+          <p className="text-sm text-muted-foreground">{t.policiesSubtitle}</p>
         </div>
       </div>
       
@@ -103,22 +106,22 @@ export const PoliciesSection = () => {
             <thead className="bg-secondary">
               <tr>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Código
+                  {t.code}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Título
+                  {t.title}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Controle ISO
+                  {t.isoControl}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Área Responsável
+                  {t.responsibleArea}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Maturidade
+                  {t.maturity}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Revisão
+                  {t.review}
                 </th>
               </tr>
             </thead>
@@ -137,21 +140,21 @@ export const PoliciesSection = () => {
                     </a>
                   </td>
                   <td className="px-6 py-4">
-                    <span className="text-sm text-card-foreground">{policy.title}</span>
+                    <span className="text-sm text-card-foreground">{t[policy.titleKey]}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-sm text-muted-foreground font-mono">{policy.control}</span>
                   </td>
                   <td className="px-6 py-4">
-                    <span className="text-sm text-muted-foreground">{policy.area}</span>
+                    <span className="text-sm text-muted-foreground">{t[policy.areaKey]}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <Badge variant={policy.status}>
-                      {policy.status === "implemented" ? "✅ Implementado" : "🟡 Em Revisão"}
+                    <Badge variant={policy.status} showLabel>
+                      {policy.status === "implemented" ? t.implemented : t.inReview}
                     </Badge>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm text-muted-foreground">{policy.review}</span>
+                    <span className="text-sm text-muted-foreground">{t[policy.reviewKey]}</span>
                   </td>
                 </tr>
               ))}

@@ -50,16 +50,16 @@ All colors MUST be HSL.
     --success: 120 100% 37%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 24 100% 50%;
+    --warning: 25 100% 51%;
     --warning-foreground: 0 0% 100%;
 
-    --info: 228 100% 50%;
+    --info: 232 100% 47%;
     --info-foreground: 0 0% 100%;
     
-    --review: 288 100% 50%;
+    --review: 288 100% 40%;
     --review-foreground: 0 0% 100%;
     
-    --in-progress: 24 100% 50%;
+    --in-progress: 25 100% 51%;
     --in-progress-foreground: 0 0% 100%;
 
     /* Professional gradients */
@@ -109,16 +109,16 @@ All colors MUST be HSL.
     --success: 120 100% 37%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 24 100% 50%;
+    --warning: 25 100% 51%;
     --warning-foreground: 0 0% 100%;
 
-    --info: 228 100% 50%;
+    --info: 232 100% 47%;
     --info-foreground: 0 0% 100%;
     
-    --review: 288 100% 50%;
+    --review: 288 100% 40%;
     --review-foreground: 0 0% 100%;
     
-    --in-progress: 24 100% 50%;
+    --in-progress: 25 100% 51%;
     --in-progress-foreground: 0 0% 100%;
 
     --gradient-primary: linear-gradient(135deg, hsl(215 15% 35%), hsl(215 15% 40%));

@@ -1,4 +1,5 @@
 import { Book } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const isoMap = [
   { domain: "A.5 — Organizacional", controls: "Políticas, Comitê, Riscos, Fornecedores, Conformidade", docs: "POL-SGSI-001/002, NRM-GR-001, PRO-REL-CON-001" },
@@ -11,15 +12,17 @@ const isoMap = [
 ];
 
 export const ISOMapSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="bg-destructive/10 p-2 rounded-lg">
-          <Book className="w-5 h-5 text-destructive" />
+        <div className="bg-in-progress/10 p-2 rounded-lg">
+          <Book className="w-5 h-5 text-in-progress" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-foreground">Mapa de Correlação ISO 27001:2022</h2>
-          <p className="text-sm text-muted-foreground">Anexo A - Domínios e Controles</p>
+          <h2 className="text-2xl font-bold text-foreground">{t.isoMap}</h2>
+          <p className="text-sm text-muted-foreground">{t.isoMapSubtitle}</p>
         </div>
       </div>
       
@@ -29,13 +32,13 @@ export const ISOMapSection = () => {
             <thead className="bg-secondary">
               <tr>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Domínio
+                  {t.domain}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Controles Principais
+                  {t.mainControls}
                 </th>
                 <th className="px-6 py-4 text-left text-xs font-semibold text-secondary-foreground uppercase tracking-wider">
-                  Documentos Relacionados
+                  {t.relatedDocs}
                 </th>
               </tr>
             </thead>

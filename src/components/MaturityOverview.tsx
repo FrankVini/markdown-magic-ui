@@ -19,10 +19,10 @@ const maturityData = [
   { domain: "A.18 — Conformidade e Auditoria", score: 8.0, status: "implemented" as const, docs: "PRO-AUD-001 / MAP-REQ-LEGAIS-001", nextAction: "Incluir calendário de auditorias técnicas" },
 ];
 
-const getScoreColor = (score: number) => {
-  if (score >= 8) return "text-success";
-  if (score >= 7) return "text-in-progress";
-  return "text-review";
+const getScoreColor = (score: number): string => {
+  if (score >= 8) return "hsl(120, 100%, 37%)";
+  if (score >= 7) return "hsl(25, 100%, 51%)";
+  return "hsl(288, 100%, 50%)";
 };
 
 export const MaturityOverview = () => {
@@ -70,12 +70,29 @@ export const MaturityOverview = () => {
                     <span className="text-sm font-semibold text-foreground">{item.domain}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`text-sm font-bold ${getScoreColor(item.score)}`}>{item.score}</span>
+                    <span className="text-sm font-bold" style={{ color: getScoreColor(item.score) }}>{item.score}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <Badge variant={item.status} showLabel>
-                      {item.status === "implemented" ? t.implemented : t.inReview}
-                    </Badge>
+                    <div className="flex items-center gap-2">
+                      <span 
+                        className="inline-flex w-6 h-6 rounded-full" 
+                        style={{ 
+                          backgroundColor: item.status === "implemented" 
+                            ? "hsl(120, 100%, 37%)" 
+                            : "hsl(288, 100%, 50%)" 
+                        }}
+                      ></span>
+                      <span 
+                        className="text-xs font-medium" 
+                        style={{ 
+                          color: item.status === "implemented" 
+                            ? "hsl(120, 100%, 37%)" 
+                            : "hsl(288, 100%, 50%)" 
+                        }}
+                      >
+                        {item.status === "implemented" ? t.implemented : t.inReview}
+                      </span>
+                    </div>
                   </td>
                   <td className="px-6 py-4">
                     <span className="text-sm text-muted-foreground font-mono">{item.docs}</span>

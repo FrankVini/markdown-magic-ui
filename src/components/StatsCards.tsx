@@ -19,10 +19,10 @@ export const StatsCards = () => {
 
       <div className="bg-card border border-border rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
         <div className="flex items-center justify-between mb-4">
-          <div className="bg-in-progress/10 p-3 rounded-xl">
-            <TrendingUp className="w-6 h-6 text-in-progress" />
+          <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(25, 100%, 51%, 0.1)' }}>
+            <TrendingUp className="w-6 h-6" style={{ color: 'hsl(25, 100%, 51%)' }} />
           </div>
-          <span className="text-3xl font-bold text-in-progress">8%</span>
+          <span className="text-3xl font-bold" style={{ color: 'hsl(25, 100%, 51%)' }}>8%</span>
         </div>
         <h3 className="text-sm font-medium text-muted-foreground mb-1">{t.inProgress}</h3>
         <p className="text-xs text-muted-foreground">{t.inReviewDesc}</p>
@@ -30,10 +30,10 @@ export const StatsCards = () => {
 
       <div className="bg-card border border-border rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
         <div className="flex items-center justify-between mb-4">
-          <div className="bg-review/10 p-3 rounded-xl">
-            <Clock className="w-6 h-6 text-review" />
+          <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(288, 100%, 50%, 0.1)' }}>
+            <Clock className="w-6 h-6" style={{ color: 'hsl(288, 100%, 50%)' }} />
           </div>
-          <span className="text-3xl font-bold text-review">6%</span>
+          <span className="text-3xl font-bold" style={{ color: 'hsl(288, 100%, 50%)' }}>6%</span>
         </div>
         <h3 className="text-sm font-medium text-muted-foreground mb-1">{t.inReview}</h3>
         <p className="text-xs text-muted-foreground">{t.inReviewDesc}</p>
@@ -41,10 +41,10 @@ export const StatsCards = () => {
 
       <div className="bg-card border border-border rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
         <div className="flex items-center justify-between mb-4">
-          <div className="bg-info/10 p-3 rounded-xl">
-            <Calendar className="w-6 h-6 text-info" />
+          <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(232, 100%, 53%, 0.1)' }}>
+            <Calendar className="w-6 h-6" style={{ color: 'hsl(232, 100%, 53%)' }} />
           </div>
-          <span className="text-3xl font-bold text-info">5%</span>
+          <span className="text-3xl font-bold" style={{ color: 'hsl(232, 100%, 53%)' }}>5%</span>
         </div>
         <h3 className="text-sm font-medium text-muted-foreground mb-1">{t.planned}</h3>
         <p className="text-xs text-muted-foreground">{t.plannedDesc}</p>

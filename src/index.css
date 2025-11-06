@@ -36,6 +36,22 @@ All colors MUST be HSL.
     --destructive: 43 74% 49%;
     --destructive-foreground: 215 25% 20%;
 
+    /* Status colors */
+    --success: 120 100% 37%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 25 100% 51%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 232 100% 53%;
+    --info-foreground: 0 0% 100%;
+
+    --review: 288 100% 50%;
+    --review-foreground: 0 0% 100%;
+
+    --in-progress: 25 100% 51%;
+    --in-progress-foreground: 0 0% 100%;
+
     --border: 210 15% 88%;
     --input: 210 15% 88%;
     --ring: 215 70% 25%;
@@ -45,16 +61,6 @@ All colors MUST be HSL.
     /* Link color #6687a7 */
     --link: 207 26% 54%;
     --link-foreground: 0 0% 100%;
-
-    /* Status colors with institutional feel */
-    --success: 145 60% 40%;
-    --success-foreground: 0 0% 100%;
-
-    --warning: 43 74% 49%;
-    --warning-foreground: 215 25% 20%;
-
-    --info: 210 80% 50%;
-    --info-foreground: 0 0% 100%;
 
     /* Professional gradients */
     --gradient-primary: linear-gradient(135deg, hsl(215 70% 25%), hsl(215 70% 35%));
@@ -100,14 +106,20 @@ All colors MUST be HSL.
     --link: 207 26% 54%;
     --link-foreground: 210 10% 85%;
 
-    --success: 95 38% 42%;
+    --success: 120 100% 37%;
     --success-foreground: 210 10% 85%;
 
-    --warning: 43 74% 49%;
-    --warning-foreground: 215 20% 12%;
+    --warning: 25 100% 51%;
+    --warning-foreground: 210 10% 85%;
 
-    --info: 262 52% 47%;
+    --info: 232 100% 53%;
     --info-foreground: 210 10% 85%;
+
+    --review: 288 100% 50%;
+    --review-foreground: 210 10% 85%;
+
+    --in-progress: 25 100% 51%;
+    --in-progress-foreground: 210 10% 85%;
 
     --gradient-primary: linear-gradient(135deg, hsl(215 15% 35%), hsl(215 15% 40%));
     --gradient-accent: linear-gradient(135deg, hsl(215 12% 24%), hsl(215 12% 28%));

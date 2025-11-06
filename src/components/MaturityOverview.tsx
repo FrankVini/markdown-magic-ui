@@ -21,8 +21,8 @@ const maturityData = [
 
 const getScoreColor = (score: number) => {
   if (score >= 8) return "text-success";
-  if (score >= 7) return "text-warning";
-  return "text-destructive";
+  if (score >= 7) return "text-in-progress";
+  return "text-review";
 };
 
 export const MaturityOverview = () => {

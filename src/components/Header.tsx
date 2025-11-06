@@ -111,7 +111,7 @@ export const Header = () => {
           variant="outline"
           size="sm"
           onClick={toggleTheme}
-          className="gap-2"
+          className="gap-2 hover:bg-primary hover:text-primary-foreground dark:hover:bg-accent dark:hover:text-accent-foreground"
         >
           {theme === "light" ? (
             <>

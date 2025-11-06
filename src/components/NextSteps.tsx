@@ -1,4 +1,5 @@
 import { Target, Calendar } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const nextSteps = [
   { icon: "📁", text: "Criar diretório Lovable/SharePoint com os 76 documentos do SGSI" },
@@ -17,17 +18,19 @@ const metrics = [
 ];
 
 export const NextSteps = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="grid md:grid-cols-2 gap-8 mb-8">
       {/* Próximas Etapas */}
       <section>
         <div className="flex items-center gap-3 mb-6">
           <div className="bg-info/10 p-2 rounded-lg">
-            <Target className="w-5 h-5 text-info" />
+            <Target className="w-5 h-5 text-[hsl(185,60%,40%)]" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-foreground">Próximas Etapas Estratégicas</h2>
-            <p className="text-sm text-muted-foreground">Roadmap de Implementação</p>
+            <h2 className="text-2xl font-bold text-foreground">{t.nextSteps}</h2>
+            <p className="text-sm text-muted-foreground">{t.nextStepsSubtitle}</p>
           </div>
         </div>
         
@@ -45,11 +48,11 @@ export const NextSteps = () => {
       <section>
         <div className="flex items-center gap-3 mb-6">
           <div className="bg-accent/10 p-2 rounded-lg">
-            <Calendar className="w-5 h-5 text-accent" />
+            <Calendar className="w-5 h-5 text-[hsl(215,70%,25%)]" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-foreground">Indicadores Gerais</h2>
-            <p className="text-sm text-muted-foreground">Métricas do SGSI</p>
+            <h2 className="text-2xl font-bold text-foreground">{t.generalIndicators}</h2>
+            <p className="text-sm text-muted-foreground">{t.generalIndicatorsSubtitle}</p>
           </div>
         </div>
         

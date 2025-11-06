@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 interface BadgeProps {
-  variant: "implemented" | "review" | "planned";
+  variant: "implemented" | "review" | "planned" | "inProgress";
   children: React.ReactNode;
   className?: string;
   showLabel?: boolean;
@@ -10,8 +10,9 @@ interface BadgeProps {
 export const Badge = ({ variant, children, className, showLabel = false }: BadgeProps) => {
   const variants = {
     implemented: "bg-success",
-    review: "bg-warning",
+    review: "bg-review",
     planned: "bg-info",
+    inProgress: "bg-in-progress",
   };
 
   if (showLabel) {

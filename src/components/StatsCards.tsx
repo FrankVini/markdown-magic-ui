@@ -41,10 +41,10 @@ export const StatsCards = () => {
 
       <div className="bg-card border border-border rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
         <div className="flex items-center justify-between mb-4">
-          <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(215, 70%, 25%, 0.1)' }}>
-            <Calendar className="w-6 h-6" style={{ color: 'hsl(215, 70%, 25%)' }} />
+          <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(220, 100%, 60%, 0.1)' }}>
+            <Calendar className="w-6 h-6" style={{ color: 'hsl(220, 100%, 60%)' }} />
           </div>
-          <span className="text-3xl font-bold" style={{ color: 'hsl(215, 70%, 25%)' }}>5%</span>
+          <span className="text-3xl font-bold" style={{ color: 'hsl(220, 100%, 60%)' }}>5%</span>
         </div>
         <h3 className="text-sm font-medium text-muted-foreground mb-1">{t.planned}</h3>
         <p className="text-xs text-muted-foreground">{t.plannedDesc}</p>

@@ -74,20 +74,24 @@ export const MaturityOverview = () => {
                     <span className="text-sm font-semibold text-foreground">{item.domain}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center gap-2">
-                      <span 
-                        className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
-                        style={{ backgroundColor: getScoreColor(item.score) }}
-                      ></span>
+                    <div className="flex items-center gap-3">
+                      <div className="flex flex-col gap-1">
+                        <span 
+                          className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
+                          style={{ backgroundColor: getScoreColor(item.score) }}
+                        ></span>
+                      </div>
                       <span className="text-sm font-bold" style={{ color: getScoreColor(item.score) }}>{item.score}</span>
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center gap-2">
-                      <span 
-                        className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
-                        style={{ backgroundColor: getStatusColor(item.status) }}
-                      ></span>
+                    <div className="flex items-center gap-3">
+                      <div className="flex flex-col gap-1">
+                        <span 
+                          className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
+                          style={{ backgroundColor: getStatusColor(item.status) }}
+                        ></span>
+                      </div>
                       <span 
                         className="text-xs font-medium" 
                         style={{ color: getStatusColor(item.status) }}

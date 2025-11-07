@@ -21,6 +21,10 @@ All colors MUST be HSL.
     /* Deep navy blue - trustworthy and professional */
     --primary: 215 70% 25%;
     --primary-foreground: 0 0% 100%;
+    
+    /* Vibrant blue for planned items */
+    --info: 220 100% 60%;
+    --info-foreground: 0 0% 100%;
 
     /* Subtle gray for secondary elements */
     --secondary: 210 15% 94%;
@@ -42,9 +46,6 @@ All colors MUST be HSL.
 
     --warning: 25 100% 51%;
     --warning-foreground: 0 0% 100%;
-
-    --info: 215 70% 25%;
-    --info-foreground: 0 0% 100%;
 
     --review: 288 100% 50%;
     --review-foreground: 0 0% 100%;
@@ -111,9 +112,6 @@ All colors MUST be HSL.
 
     --warning: 25 100% 51%;
     --warning-foreground: 210 10% 85%;
-
-    --info: 215 70% 25%;
-    --info-foreground: 210 10% 85%;
 
     --review: 288 100% 50%;
     --review-foreground: 210 10% 85%;

@@ -63,7 +63,7 @@ const policies = [
     title: "Política de Controle de Computação do Usuário Final",
     control: "A.8.32 / A.9.4",
     area: "Desenvolvimento / SI",
-    status: "review" as const,
+    status: "implemented" as const,
     review: "Anual"
   },
   {

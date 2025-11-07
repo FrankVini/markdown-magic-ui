@@ -21,8 +21,12 @@ const maturityData = [
 
 const getScoreColor = (score: number): string => {
   if (score >= 8) return "hsl(120, 100%, 37%)";
-  if (score >= 7) return "hsl(25, 100%, 51%)";
+  if (score >= 7) return "hsl(48, 100%, 50%)";
   return "hsl(288, 100%, 50%)";
+};
+
+const getStatusColor = (status: "implemented" | "review"): string => {
+  return status === "implemented" ? "hsl(120, 100%, 37%)" : "hsl(288, 100%, 50%)";
 };
 
 export const MaturityOverview = () => {
@@ -70,25 +74,23 @@ export const MaturityOverview = () => {
                     <span className="text-sm font-semibold text-foreground">{item.domain}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm font-bold" style={{ color: getScoreColor(item.score) }}>{item.score}</span>
+                    <div className="flex items-center gap-2">
+                      <span 
+                        className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
+                        style={{ backgroundColor: getScoreColor(item.score) }}
+                      ></span>
+                      <span className="text-sm font-bold" style={{ color: getScoreColor(item.score) }}>{item.score}</span>
+                    </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center gap-2">
                       <span 
-                        className="inline-flex w-6 h-6 rounded-full" 
-                        style={{ 
-                          backgroundColor: item.status === "implemented" 
-                            ? "hsl(120, 100%, 37%)" 
-                            : "hsl(288, 100%, 50%)" 
-                        }}
+                        className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
+                        style={{ backgroundColor: getStatusColor(item.status) }}
                       ></span>
                       <span 
                         className="text-xs font-medium" 
-                        style={{ 
-                          color: item.status === "implemented" 
-                            ? "hsl(120, 100%, 37%)" 
-                            : "hsl(288, 100%, 50%)" 
-                        }}
+                        style={{ color: getStatusColor(item.status) }}
                       >
                         {item.status === "implemented" ? t.implemented : t.inReview}
                       </span>

@@ -51,11 +51,11 @@ const Index = () => {
               <div className="space-y-6">
                 <div className="p-6 rounded-lg border border-border">
                   <div className="flex items-center gap-2 mb-4">
-                    <h3 className="font-semibold text-lg" style={{ color: 'hsl(25, 100%, 51%)' }}>{t.pentestInProgress}</h3>
+                    <h3 className="font-semibold text-lg" style={{ color: 'hsl(48, 100%, 50%)' }}>{t.pentestInProgress}</h3>
                   </div>
                   <ul className="text-muted-foreground space-y-2">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(25, 100%, 51%)' }} />
+                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(48, 100%, 50%)' }} />
                       {t.pentestDomoFacial}
                     </li>
                   </ul>
@@ -123,7 +123,7 @@ const Index = () => {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">{t.impactReports}</span>
                       <div className="flex items-center gap-2">
-                        <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(25, 100%, 51%)' }}></span>
+                        <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(48, 100%, 50%)' }}></span>
                         <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                       </div>
                     </div>
@@ -170,7 +170,7 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(25, 100%, 51%)' }}></span>
+                            <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(48, 100%, 50%)' }}></span>
                             <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                           </div>
                         </td>
@@ -180,7 +180,7 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS} / {t.areaInfoSecurity}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(232, 100%, 53%)' }}></span>
+                            <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(215, 70%, 25%)' }}></span>
                             <span className="text-xs font-medium text-foreground">{t.planned}</span>
                           </div>
                         </td>

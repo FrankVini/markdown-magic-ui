@@ -43,14 +43,14 @@ All colors MUST be HSL.
     --warning: 25 100% 51%;
     --warning-foreground: 0 0% 100%;
 
-    --info: 232 100% 53%;
+    --info: 215 70% 25%;
     --info-foreground: 0 0% 100%;
 
     --review: 288 100% 50%;
     --review-foreground: 0 0% 100%;
 
-    --in-progress: 25 100% 51%;
-    --in-progress-foreground: 0 0% 100%;
+    --in-progress: 48 100% 50%;
+    --in-progress-foreground: 215 25% 20%;
 
     --border: 210 15% 88%;
     --input: 210 15% 88%;
@@ -112,13 +112,13 @@ All colors MUST be HSL.
     --warning: 25 100% 51%;
     --warning-foreground: 210 10% 85%;
 
-    --info: 232 100% 53%;
+    --info: 215 70% 25%;
     --info-foreground: 210 10% 85%;
 
     --review: 288 100% 50%;
     --review-foreground: 210 10% 85%;
 
-    --in-progress: 25 100% 51%;
+    --in-progress: 48 100% 50%;
     --in-progress-foreground: 210 10% 85%;
 
     --gradient-primary: linear-gradient(135deg, hsl(215 15% 35%), hsl(215 15% 40%));

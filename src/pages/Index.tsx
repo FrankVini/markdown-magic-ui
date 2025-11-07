@@ -99,31 +99,31 @@ const Index = () => {
                 <div className="p-6 rounded-lg border border-border">
                   <h3 className="font-semibold text-lg mb-4 text-foreground">{t.complianceStatus}</h3>
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">{t.dataMapping}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(120, 100%, 37%)' }}></span>
+                    <div className="flex items-center gap-4">
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(120, 100%, 37%)' }}></span>
+                      <div className="flex items-center justify-between flex-1">
+                        <span className="text-sm text-muted-foreground">{t.dataMapping}</span>
                         <span className="text-xs font-medium text-foreground">{t.complete}</span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">{t.privacyPolicies}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(120, 100%, 37%)' }}></span>
+                    <div className="flex items-center gap-4">
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(120, 100%, 37%)' }}></span>
+                      <div className="flex items-center justify-between flex-1">
+                        <span className="text-sm text-muted-foreground">{t.privacyPolicies}</span>
                         <span className="text-xs font-medium text-foreground">{t.complete}</span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">{t.consent}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(288, 100%, 50%)' }}></span>
+                    <div className="flex items-center gap-4">
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(288, 100%, 50%)' }}></span>
+                      <div className="flex items-center justify-between flex-1">
+                        <span className="text-sm text-muted-foreground">{t.consent}</span>
                         <span className="text-xs font-medium text-foreground">{t.inReview}</span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">{t.impactReports}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(48, 100%, 50%)' }}></span>
+                    <div className="flex items-center gap-4">
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(48, 100%, 50%)' }}></span>
+                      <div className="flex items-center justify-between flex-1">
+                        <span className="text-sm text-muted-foreground">{t.impactReports}</span>
                         <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                       </div>
                     </div>

@@ -146,9 +146,12 @@ export const PoliciesSection = () => {
                     <span className="text-sm text-muted-foreground">{policy.area}</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <Badge variant={policy.status}>
-                      {policy.status === "implemented" ? "✅ Implementado" : "🟡 Em Revisão"}
-                    </Badge>
+                    <div className="flex items-center gap-2">
+                      <span 
+                        className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
+                        style={{ backgroundColor: policy.status === "implemented" ? 'hsl(120, 100%, 37%)' : 'hsl(288, 100%, 50%)' }}
+                      ></span>
+                    </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-sm text-muted-foreground">{policy.review}</span>

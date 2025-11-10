@@ -18,10 +18,10 @@ export const StatsCards = () => {
 
       <div className="bg-card border border-border rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
         <div className="flex items-center justify-between mb-4">
-          <div className="bg-in-progress/10 p-3 rounded-xl">
+          <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(210, 79%, 46%, 0.1)' }}>
             <span className="text-3xl">🔄</span>
           </div>
-          <span className="text-3xl font-bold text-in-progress">8%</span>
+          <span className="text-3xl font-bold" style={{ color: 'hsl(210, 79%, 46%)' }}>8%</span>
         </div>
         <h3 className="text-sm font-medium text-muted-foreground mb-1">{t.inProgress}</h3>
         <p className="text-xs text-muted-foreground">{t.inReviewDesc}</p>
@@ -29,10 +29,10 @@ export const StatsCards = () => {
 
       <div className="bg-card border border-border rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
         <div className="flex items-center justify-between mb-4">
-          <div className="bg-review/10 p-3 rounded-xl">
+          <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(207, 89%, 68%, 0.1)' }}>
             <span className="text-3xl">👁️‍🗨️</span>
           </div>
-          <span className="text-3xl font-bold text-review">6%</span>
+          <span className="text-3xl font-bold" style={{ color: 'hsl(207, 89%, 68%)' }}>6%</span>
         </div>
         <h3 className="text-sm font-medium text-muted-foreground mb-1">{t.inReview}</h3>
         <p className="text-xs text-muted-foreground">{t.inReviewDesc}</p>

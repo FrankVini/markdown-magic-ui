@@ -65,9 +65,9 @@ export const Header = () => {
 
   return (
     <div className="mb-8 space-y-4">
-      <header className="bg-black text-primary-foreground py-8 px-6 rounded-2xl shadow-xl">
+      <header className="bg-[hsl(0,0%,25%)] dark:bg-[hsl(0,0%,20%)] text-primary-foreground py-8 px-6 rounded-2xl shadow-xl">
         <div className="flex items-center gap-4 mb-4 flex-wrap">
-          <div className="bg-black p-3 rounded-xl">
+          <div className="bg-[hsl(0,0%,25%)] dark:bg-[hsl(0,0%,20%)] p-3 rounded-xl">
             <img src={domonetLogo} alt="DOMONET" className="w-32 h-auto" />
           </div>
           <div className="flex-1 min-w-[200px]">

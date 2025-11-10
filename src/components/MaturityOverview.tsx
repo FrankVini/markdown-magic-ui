@@ -19,14 +19,12 @@ const maturityData = [
   { domain: "A.18 — Conformidade e Auditoria", score: 8.0, status: "implemented" as const, docs: "PRO-AUD-001 / MAP-REQ-LEGAIS-001", nextAction: "Incluir calendário de auditorias técnicas" },
 ];
 
-const getScoreColor = (score: number): string => {
-  if (score >= 8) return "hsl(120, 100%, 37%)";
-  if (score >= 7) return "hsl(48, 100%, 50%)";
-  return "hsl(288, 100%, 50%)";
+const getStatusColor = (status: "implemented" | "review"): string => {
+  return status === "implemented" ? "hsl(146, 72%, 42%)" : "hsl(207, 89%, 68%)";
 };
 
-const getStatusColor = (status: "implemented" | "review"): string => {
-  return status === "implemented" ? "hsl(120, 100%, 37%)" : "hsl(288, 100%, 50%)";
+const getStatusIcon = (status: "implemented" | "review"): string => {
+  return status === "implemented" ? "✅" : "👁️‍🗨️";
 };
 
 export const MaturityOverview = () => {
@@ -84,12 +82,7 @@ export const MaturityOverview = () => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center gap-3">
-                      <div className="flex flex-col gap-1">
-                        <span 
-                          className="inline-flex w-6 h-6 rounded-full flex-shrink-0" 
-                          style={{ backgroundColor: getStatusColor(item.status) }}
-                        ></span>
-                      </div>
+                      <span className="text-xl flex-shrink-0">{getStatusIcon(item.status)}</span>
                       <span 
                         className="text-xs font-medium" 
                         style={{ color: getStatusColor(item.status) }}

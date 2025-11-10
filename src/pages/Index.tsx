@@ -106,31 +106,39 @@ const Index = () => {
                   <h3 className="font-semibold text-lg mb-4 text-foreground">{t.complianceStatus}</h3>
                   <div className="space-y-3">
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-success"></span>
+                      <span className="text-2xl flex-shrink-0">✅</span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.dataMapping}</span>
-                        <span className="text-xs font-medium text-foreground">{t.complete}</span>
+                        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: 'hsl(146, 72%, 42%, 0.1)', color: 'hsl(146, 72%, 42%)' }}>
+                          {t.complete}
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-success"></span>
+                      <span className="text-2xl flex-shrink-0">✅</span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.privacyPolicies}</span>
-                        <span className="text-xs font-medium text-foreground">{t.complete}</span>
+                        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: 'hsl(146, 72%, 42%, 0.1)', color: 'hsl(146, 72%, 42%)' }}>
+                          {t.complete}
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-review"></span>
+                      <span className="text-2xl flex-shrink-0">👁️‍🗨️</span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.consent}</span>
-                        <span className="text-xs font-medium text-foreground">{t.inReview}</span>
+                        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: 'hsl(207, 89%, 68%, 0.1)', color: 'hsl(207, 89%, 68%)' }}>
+                          {t.inReview}
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-in-progress"></span>
+                      <span className="text-2xl flex-shrink-0">🔄</span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.impactReports}</span>
-                        <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
+                        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: 'hsl(210, 79%, 46%, 0.1)', color: 'hsl(210, 79%, 46%)' }}>
+                          {t.inProgress}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -176,8 +184,10 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full bg-in-progress"></span>
-                            <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
+                            <span className="text-lg">🔄</span>
+                            <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: 'hsl(210, 79%, 46%, 0.1)', color: 'hsl(210, 79%, 46%)' }}>
+                              {t.inProgress}
+                            </span>
                           </div>
                         </td>
                       </tr>
@@ -186,8 +196,10 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS} / {t.areaInfoSecurity}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full bg-info"></span>
-                            <span className="text-xs font-medium text-foreground">{t.planned}</span>
+                            <span className="text-lg">📅</span>
+                            <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: 'hsl(149, 57%, 77%, 0.1)', color: 'hsl(149, 57%, 77%)' }}>
+                              {t.planned}
+                            </span>
                           </div>
                         </td>
                       </tr>
@@ -196,8 +208,10 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaHRIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
-                            <span className="text-xs font-medium text-foreground">{t.active}</span>
+                            <span className="text-lg">✅</span>
+                            <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: 'hsl(146, 72%, 42%, 0.1)', color: 'hsl(146, 72%, 42%)' }}>
+                              {t.active}
+                            </span>
                           </div>
                         </td>
                       </tr>

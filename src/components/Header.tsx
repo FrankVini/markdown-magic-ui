@@ -1,4 +1,5 @@
 import { Shield, LogOut, User, Sun, Moon } from "lucide-react";
+import domonetLogo from "@/assets/domonet-logo.png";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
@@ -64,14 +65,13 @@ export const Header = () => {
 
   return (
     <div className="mb-8 space-y-4">
-      <header className="bg-gradient-primary text-primary-foreground py-8 px-6 rounded-2xl shadow-xl">
+      <header className="bg-black text-primary-foreground py-8 px-6 rounded-2xl shadow-xl">
         <div className="flex items-center gap-4 mb-4 flex-wrap">
-          <div className="bg-primary-foreground/20 p-3 rounded-xl">
-            <Shield className="w-8 h-8" />
+          <div className="bg-black p-3 rounded-xl">
+            <img src={domonetLogo} alt="DOMONET" className="w-32 h-auto" />
           </div>
           <div className="flex-1 min-w-[200px]">
-            <h1 className="text-3xl font-bold">DOMONET {selectedCompany !== "none" ? selectedCompany : ""}</h1>
-            <p className="text-primary-foreground/90 text-sm">{t.subtitle}</p>
+            <p className="text-white/90 text-sm">{t.subtitle}</p>
           </div>
           <div className="flex items-center gap-3">
             <Select value={selectedCompany} onValueChange={setSelectedCompany}>

@@ -6,6 +6,7 @@ import { ProceduresSection } from "@/components/ProceduresSection";
 import { ISOMapSection } from "@/components/ISOMapSection";
 import { MaturityOverview } from "@/components/MaturityOverview";
 import { NextSteps } from "@/components/NextSteps";
+import { IndicatorsTab } from "@/components/IndicatorsTab";
 import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/Badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -23,9 +24,10 @@ const Index = () => {
         <StatsCards />
         
         <Tabs defaultValue="documentos" className="mt-8">
-          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4 mb-8">
+          <TabsList className="grid w-full max-w-5xl mx-auto grid-cols-5 mb-8">
             <TabsTrigger value="documentos">{t.tabDocuments}</TabsTrigger>
             <TabsTrigger value="maturidade">{t.tabMaturity}</TabsTrigger>
+            <TabsTrigger value="indicadores">Indicadores</TabsTrigger>
             <TabsTrigger value="pentest">{t.tabPentest}</TabsTrigger>
             <TabsTrigger value="lgpd">{t.tabLgpd}</TabsTrigger>
           </TabsList>
@@ -42,6 +44,10 @@ const Index = () => {
             <NextSteps />
           </TabsContent>
           
+          <TabsContent value="indicadores" className="space-y-8">
+            <IndicatorsTab />
+          </TabsContent>
+          
           <TabsContent value="pentest" className="space-y-8">
             <div className="bg-card rounded-xl shadow-lg p-6 border border-border">
               <h2 className="text-2xl font-bold mb-6 text-foreground">{t.pentestTitle}</h2>
@@ -51,11 +57,11 @@ const Index = () => {
               <div className="space-y-6">
                 <div className="p-6 rounded-lg border border-border">
                   <div className="flex items-center gap-2 mb-4">
-                    <h3 className="font-semibold text-lg" style={{ color: 'hsl(48, 100%, 50%)' }}>{t.pentestInProgress}</h3>
+                    <h3 className="font-semibold text-lg text-in-progress">{t.pentestInProgress}</h3>
                   </div>
                   <ul className="text-muted-foreground space-y-2">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(48, 100%, 50%)' }} />
+                      <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-in-progress" />
                       {t.pentestDomoFacial}
                     </li>
                   </ul>
@@ -63,27 +69,27 @@ const Index = () => {
                 
                 <div className="p-6 rounded-lg border border-border">
                   <div className="flex items-center gap-2 mb-4">
-                    <h3 className="font-semibold text-lg" style={{ color: 'hsl(120, 100%, 37%)' }}>{t.pentestCompleted}</h3>
+                    <h3 className="font-semibold text-lg text-success">{t.pentestCompleted}</h3>
                   </div>
                   <ul className="text-muted-foreground space-y-2">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(120, 100%, 37%)' }} />
+                      <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-success" />
                       {t.pentestSystemAccelero}
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(120, 100%, 37%)' }} />
+                      <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-success" />
                       {t.pentestSystemOzone}
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(120, 100%, 37%)' }} />
+                      <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-success" />
                       {t.pentestGateway}
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(120, 100%, 37%)' }} />
+                      <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-success" />
                       {t.pentestFacialPlate}
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: 'hsl(120, 100%, 37%)' }} />
+                      <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-success" />
                       {t.pentestDomocam}
                     </li>
                   </ul>
@@ -100,28 +106,28 @@ const Index = () => {
                   <h3 className="font-semibold text-lg mb-4 text-foreground">{t.complianceStatus}</h3>
                   <div className="space-y-3">
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(120, 100%, 37%)' }}></span>
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-success"></span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.dataMapping}</span>
                         <span className="text-xs font-medium text-foreground">{t.complete}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(120, 100%, 37%)' }}></span>
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-success"></span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.privacyPolicies}</span>
                         <span className="text-xs font-medium text-foreground">{t.complete}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(288, 100%, 50%)' }}></span>
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-review"></span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.consent}</span>
                         <span className="text-xs font-medium text-foreground">{t.inReview}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0" style={{ backgroundColor: 'hsl(48, 100%, 50%)' }}></span>
+                      <span className="inline-flex w-6 h-6 rounded-full flex-shrink-0 bg-in-progress"></span>
                       <div className="flex items-center justify-between flex-1">
                         <span className="text-sm text-muted-foreground">{t.impactReports}</span>
                         <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
@@ -170,7 +176,7 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(48, 100%, 50%)' }}></span>
+                            <span className="inline-flex w-6 h-6 rounded-full bg-in-progress"></span>
                             <span className="text-xs font-medium text-foreground">{t.inProgress}</span>
                           </div>
                         </td>
@@ -180,7 +186,7 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaLegalIS} / {t.areaInfoSecurity}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(215, 70%, 25%)' }}></span>
+                            <span className="inline-flex w-6 h-6 rounded-full bg-info"></span>
                             <span className="text-xs font-medium text-foreground">{t.planned}</span>
                           </div>
                         </td>
@@ -190,7 +196,7 @@ const Index = () => {
                         <td className="px-4 py-3 text-sm text-muted-foreground">{t.areaHRIS}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
-                            <span className="inline-flex w-6 h-6 rounded-full" style={{ backgroundColor: 'hsl(120, 100%, 37%)' }}></span>
+                            <span className="inline-flex w-6 h-6 rounded-full bg-success"></span>
                             <span className="text-xs font-medium text-foreground">{t.active}</span>
                           </div>
                         </td>

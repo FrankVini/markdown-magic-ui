@@ -41,17 +41,20 @@ All colors MUST be HSL.
     --destructive-foreground: 215 25% 20%;
 
     /* Status colors */
-    --success: 120 100% 37%;
+    --success: 146 72% 42%;
     --success-foreground: 0 0% 100%;
 
     --warning: 25 100% 51%;
     --warning-foreground: 0 0% 100%;
 
-    --review: 288 100% 50%;
+    --review: 207 89% 68%;
     --review-foreground: 0 0% 100%;
 
-    --in-progress: 48 100% 50%;
-    --in-progress-foreground: 215 25% 20%;
+    --in-progress: 210 79% 46%;
+    --in-progress-foreground: 0 0% 100%;
+    
+    --info: 149 57% 77%;
+    --info-foreground: 215 25% 20%;
 
     --border: 210 15% 88%;
     --input: 210 15% 88%;
@@ -107,17 +110,14 @@ All colors MUST be HSL.
     --link: 207 26% 54%;
     --link-foreground: 210 10% 85%;
 
-    --success: 120 100% 37%;
+    --success: 146 72% 42%;
+    --review: 207 89% 68%;
+    --in-progress: 210 79% 46%;
+    --info: 149 57% 77%;
     --success-foreground: 210 10% 85%;
 
     --warning: 25 100% 51%;
     --warning-foreground: 210 10% 85%;
-
-    --review: 288 100% 50%;
-    --review-foreground: 210 10% 85%;
-
-    --in-progress: 48 100% 50%;
-    --in-progress-foreground: 210 10% 85%;
 
     --gradient-primary: linear-gradient(135deg, hsl(215 15% 35%), hsl(215 15% 40%));
     --gradient-accent: linear-gradient(135deg, hsl(215 12% 24%), hsl(215 12% 28%));
